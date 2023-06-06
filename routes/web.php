@@ -22,3 +22,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('gymIndividual/{Gym_id}', 'App\Http\Controllers\GymController@show');
+
+Route::get('/gymAll','App\Http\Controllers\GymController@list');
+
+Route::get('/gyms/create', 'App\Http\Controllers\GymController@create');
+
+Route::post('storeGym',  'App\Http\Controllers\GymController@store');
