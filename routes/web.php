@@ -23,9 +23,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('gymIndividual/{Gym_id}', 'App\Http\Controllers\GymController@show');
+Route::get('gymIndividual/{Gym_id}', 'App\Http\Controllers\GymController@show')->name('gymIndividual');
 
-Route::get('/gymAll','App\Http\Controllers\GymController@list');
+Route::get('gymAll','App\Http\Controllers\GymController@list')->name('list_gym');
 
 Route::get('/gyms/create', 'App\Http\Controllers\GymController@create');
 
